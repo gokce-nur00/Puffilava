@@ -1,0 +1,125 @@
+{
+    "desserts":[
+        {   "sys":{"id":"1"},
+            "fields":{
+            "name":"Pistachio Baklava",
+            "image":"img/products/baklava.jpg",
+            "cost":"₺595"
+        }},
+        {   "sys":{"id":"2"},
+            "fields":{
+            "name":"Strawberry Cold Baklava",
+            "image":"img/products/cilekli_soguk_baklava.jpg",
+            "cost":"₺600"
+        }},
+        {"sys":{"id":"3"},
+        "fields":{
+            "name":"Carrot Slice",
+            "image":"img/products/havuc_dilimi.jpg",
+            "cost":"₺620"
+        }},
+        {"sys":{"id":"4"},
+        "fields":{
+            "name":"Pistachio Bomb",
+            "image":"img/products/fıstık_bomba.jpg",
+            "cost":"₺595"
+        }},
+        {"sys":{"id":"5"},
+        "fields":{
+            "name":"Chocolate Cold Baklava",
+            "image":"img/products/cikolatali_soguk_baklava.jpg",
+            "cost":"₺595"
+        }},
+        {"sys":{"id":"6"},
+        "fields":{
+            "name":"Sobiyet",
+            "image":"img/products/sobiyet.jpg",
+            "cost":"₺595"
+        }},
+        {"sys":{"id":"7"},
+        "fields":{
+            "name":"Burma Kadayif",
+            "image":"img/products/burma_kadayif.jpg",
+            "cost":"₺595"
+        }},
+        {"sys":{"id":"8"},
+        "fields":{
+            "name":"Pistachio Sarma",
+            "image":"img/products/fıstık_sarma.jpg",
+            "cost":"₺595"
+        }},
+        {"sys":{"id":"9"},
+        "fields":{
+            "name":"Blackberry Petifur",
+            "image":"img/products/bogurtlenli_petifür.jpg",
+            "cost":"₺120"
+        }},
+        {"sys":{"id":"10"},
+        "fields":{
+            "name":"Chocolate Banana Petifur",
+            "image":"img/products/cikolata_muzlu_petifür.jpg",
+            "cost":"₺120"
+        }},
+        {"sys":{"id":"11"},
+        "fields":{
+            "name":"Strawberry Petifur",
+            "image":"img/products/cilekli_petifür.jpg",
+            "cost":"₺120"
+        }},
+        {"sys":{"id":"12"},
+        "fields":{
+            "name":"Strawberry Tart",
+            "image":"img/products/cilekli_tart.jpg",
+            "cost":"₺200"
+        }},
+        {"sys":{"id":"13"},
+        "fields":{
+            "name":"Pumpkin Dessert",
+            "image":"img/products/kabak_tatlısı.jpg",
+            "cost":"₺100"
+        }},
+        {"sys":{"id":"14"},
+        "fields":{
+            "name":"Muhallebi",
+            "image":"img/products/muhallebi.jpg",
+            "cost":"₺70"
+        }},
+        {"sys":{"id":"15"},
+        "fields":{
+            "name":"Sutlac",
+            "image":"img/products/sutlac.jpg",
+            "cost":"₺70"
+        }},
+        {"sys":{"id":"16"},
+        "fields":{
+            "name":"Forest Fruit Cake",
+            "image":"img/products/orman_meyveli_pasta.jpg",
+            "cost":"₺220"
+        }},
+        {"sys":{"id":"17"},
+        "fields":{
+            "name":"Green Mussel",
+            "image":"img/products/yesil_midye.jpg",
+            "cost":"₺600"
+        }},
+        {"sys":{"id":"18"},
+        "fields":{
+            "name":"Trilece",
+            "image":"img/products/trilece.jpg",
+            "cost":"₺100"
+        }},
+        {"sys":{"id":"19"},
+        "fields":{
+            "name":"Borek of Bosnians",
+            "image":"img/products/bosnak_boregi.jpg",
+            "cost":"₺100"
+        }},
+        {"sys":{"id":"20"},
+        "fields":{
+            "name":"Classic Borek",
+            "image":"img/products/su_boregi.jpg",
+            "cost":"₺100"
+        }}
+
+    ]
+}

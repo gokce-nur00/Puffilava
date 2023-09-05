@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Puffilava Ctrl + Future Project</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <section id="header">
+            <a href="#"><img src="img/logo.png" class="logo"></a>
+            
+            <div>
+                <ul id="navbar">
+                    <li id="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="text" id="search-item" placeholder="Search products" 
+                        onkeyup="search()"></li>
+                    
+                    
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="lg-bag"><a href="card.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
+                    <a href="#" id="close"><i class="far fa-times"></i></a>
+                </ul>
+            </div>
+            
+            <div id="mobile">
+                <a href="card.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+                <i id="bar" class="fas fa-outdent"></i>
+            </div>
+        </section>
+
+        <section id="page-header">
+            <h2>We know what <span>you</span> deserve?</h2>
+            <h2><span>DESSERT!</span></h2>
+        </section>
+
+        <section id="product1" class="section-p1">
+            <h2>Products</h2>
+            <p>You can find it in all stores!</p>
+            <div class="pro-container" id="pro-container">
+                <div class="pro" data-id="1" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/baklava.jpg" alt="">
+                    <div class="des">
+                        <h5>Pistachio Baklava</h5>
+                        <h4>₺595</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="2" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/cilekli_soguk_baklava.jpg" alt="">
+                    <div class="des">
+                        <h5>Strawberry Cold Baklava</h5>
+                        <h4>₺600</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="3" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/havuc_dilimi.jpg" alt="">
+                    <div class="des">
+                        <h5>Carrot Slice</h5>
+                        <h4>₺620</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="4" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/fıstık_bomba.jpg" alt="">
+                    <div class="des">
+                        <h5>Pistachio Bomb</h5>
+                        <h4>₺595</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="5" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/cikolatali_soguk_baklava.jpg" alt="">
+                    <div class="des">
+                        <h5>Chocolate Cold Baklava</h5>
+                        <h4>₺595</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="6" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/sobiyet.jpg" alt="">
+                    <div class="des">
+                        <h5>Sobiyet</h5>
+                        <h4>₺595</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="7" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/burma_kadayif.jpg" alt="">
+                    <div class="des">
+                        <h5>Burma Kadayif</h5>
+                        <h4>₺595</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="8" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/fıstık_sarma.jpg" alt="">
+                    <div class="des">
+                        <h5>Pistachio Sarma</h5>
+                        <h4>₺595</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="9" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/bogurtlenli_petifür.jpg" alt="">
+                    <div class="des">
+                        <h5>Blackberry Petifur</h5>
+                        <h4>₺120</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="10" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/cikolata_muzlu_petifür.jpg" alt="">
+                    <div class="des">
+                        <h5>Chocolate Banana Petifur</h5>
+                        <h4>₺120</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="11" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/cilekli_petifür.jpg" alt="">
+                    <div class="des">
+                        <h5>Strawberry Petifur</h5>
+                        <h4>₺120</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="12" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/cilekli_tart.jpg" alt="">
+                    <div class="des">
+                        <h5>Strawberry Tart
+                        </h5>
+                        <h4>₺200</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="13" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/kabak_tatlısı.jpg" alt="">
+                    <div class="des">
+                        <h5>Pumpkin Dessert</h5>
+                        <h4>₺100</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="14" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/muhallebi.jpg" alt="">
+                    <div class="des">
+                        <h5>Muhallebi</h5>
+                        <h4>₺70</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="15" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/sutlac.jpg" alt="">
+                    <div class="des">
+                        <h5>Sütlaç</h5>
+                        <h4>₺70</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="16" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/orman_meyveli_pasta.jpg" alt="">
+                    <div class="des">
+                        <h5>Forest Fruit Cake</h5>
+                        <h4>₺220</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="17" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/yesil_midye.jpg" alt="">
+                    <div class="des">
+                        <h5>Green Mussel</h5>
+                        <h4>₺600</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="18" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/trilece.jpg" alt="">
+                    <div class="des">
+                        <h5>Trileçe</h5>
+                        <h4>₺100</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="19" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/bosnak_boregi.jpg" alt="">
+                    <div class="des">
+                        <h5>Borek of Bosnians</h5>
+                        <h4>₺100</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-id="20" onclick="window.location.href= 'singleproduct.html';">
+                    <img src="img/products/su_boregi.jpg" alt="">
+                    <div class="des">
+                        <h5>Classic Borek</h5>
+                        <h4>₺100</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="section-p1">
+            <div class="col">
+                <img src="img/logo.png" class="logo">
+                <h4>Contact</h4>
+                <p> <strong>Adress:</strong>Ümit Mah. 2467. Cad. No:1B/ 68 (Gordion AVM yanı)</p>
+                <p><strong>Phone:</strong>0 (312) 511 42 04</p>
+
+            </div>
+
+            <div class="col">
+                <h4>Branches</h4>
+                <p>ÜMİTKÖY - NOKTA</p>
+                <p>BAHÇELİEVLER</p>
+                <p>BALGAT</p>
+                <p>MAİDAN</p>
+                <p>KAŞMİR CENTER</p>
+            </div>
+
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About Us</a>
+                <a href="#"> Privacy Policy</a>
+                <a href="contact.html"> Contact Us</a>
+            </div>
+
+            <div class="col pay">
+                <p>Secured Payment Gateways</p>
+                <img src="img/pay.png">
+            </div>
+
+            <div class="copyright">
+                <p>GNP, Ctrl+Future Project, 2023</p>
+            </div>
+
+        </footer>
+        <script src="script.js"></script>
+    </body>
+
+</html>

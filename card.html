@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Puffilava Ctrl + Future Project</title>
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <section id="header">
+            <a href="#"><img src="img/logo.png" class="logo"></a>
+            
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="lg-bag"><a class="active" href="card.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
+                    <a href="#" id="close"><i class="far fa-times"></i></a>
+                </ul>
+            </div>
+            
+            <div id="mobile">
+                <a href="card.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+                <i id="bar" class="fas fa-outdent"></i>
+            </div>
+        </section>
+
+        <section id="page-header">
+            <h2>Card</h2>
+        </section>
+
+        <section id="card" class="section-p1">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Remove</td>
+                        <td>Image</td>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Subtotal</td>
+                    </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                    <td>
+                        <button class="normal" id="remove-button">
+                            <i class="far fa-times-circle"></i>
+                        </bu>
+                    </td>
+                    <td>
+                        <img src="img/products/cilekli_soguk_baklava.jpg" alt="">
+                    </td>
+                    <td>
+                        Strawberry Cold Baklava
+                    </td>
+                    <td>₺600</td>
+                    <td>
+                        <input type="number" value="1">
+                    </td>
+                    <td>₺600</td>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="card-add" class="section-p1">
+            <div id="subtotal">
+                <h3>Card Total</h3>
+                <table>
+                    <tr>
+                        <td>
+                           Card Subtotal 
+                        </td>
+                        <td>₺595</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong>₺595</strong></td>
+                    </tr>
+                </table>
+                <button class="normal">checkout</button>
+            </div>
+        </section>
+
+        <section id="news" class="section-p1 section-m1">
+            <div class="newstext">
+                <h4>Sign Up</h4>
+                <p>To be informed about <span>the campaigns.</span></p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your email adress">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+
+        
+        <footer class="section-p1">
+            <div class="col">
+                <img src="img/logo.png" class="logo">
+                <h4>Contact</h4>
+                <p> <strong>Adress:</strong>Ümit Mah. 2467. Cad. No:1B/ 68 (Gordion AVM yanı)</p>
+                <p><strong>Phone:</strong>0 (312) 511 42 04</p>
+
+            </div>
+
+            <div class="col">
+                <h4>Branches</h4>
+                <p>ÜMİTKÖY - NOKTA</p>
+                <p>BAHÇELİEVLER</p>
+                <p>BALGAT</p>
+                <p>MAİDAN</p>
+                <p>KAŞMİR CENTER</p>
+            </div>
+
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About Us</a>
+                <a href="#"> Privacy Policy</a>
+                <a href="contact.html"> Contact Us</a>
+            </div>
+
+            <div class="col pay">
+                <p>Secured Payment Gateways</p>
+                <img src="img/pay.png">
+            </div>
+
+            <div class="copyright">
+                <p>GNP, Ctrl+Future Project, 2023</p>
+            </div>
+
+        </footer>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

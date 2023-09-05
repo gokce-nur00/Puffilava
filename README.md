@@ -25,7 +25,8 @@ Newsletter registration with e-mail address on the Contact page <br>
 Table of products added in Card section <br>
 
 You can use the following git link to add the project to your own computer:  <br>
-
+https://github.com/gokce-nur00/Puffilava.git
+ <br>
 You can click on the link below for direct access to the site:  <br>
 https://puffilava.vercel.app/ 
   <br>

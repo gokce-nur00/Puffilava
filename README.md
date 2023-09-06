@@ -23,6 +23,8 @@ Information about the patisserie on the About page <br>
 Access information and map on the Contact page <br>
 Newsletter registration with e-mail address on the Contact page <br>
 Table of products added in Card section <br>
+Changing the quantity of the product added on the Card page and updating the price according to the changed quantity <br>
+Removing the product on the Card Page <br>
 
 You can use the following git link to add the project to your own computer:  <br>
 https://github.com/gokce-nur00/Puffilava.git

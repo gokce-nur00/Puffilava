@@ -56,10 +56,29 @@
                     <div class="product-title"><h6 id="productName"></h6></div>
                     <div class="product-price"><h6 id="productCost"></h6></div>
                     <div class="product-quantity">
-                        <input type="number" id="quantityInput" value="1">
+                        <input type="number" id="quantityInput" value="0">
                     </div>
                     <div class="product-subtotal"><h2 id="productCost"></h2></div>
                 </div>
+            </div>
+            <div id="subtotal">
+                <h3>Card Total</h3>
+                <div class="container">
+                    <div class="row">
+                        <h5>Card Subtotal</h5>
+                        <div class="product-subtotal"><h2 id="productCost1"></h2></div>
+                    </div>
+                    <div class="row">
+                        <h5>Shipping</h5>
+                        <h5>Free</h5>
+                    </div>
+                    <div class="row">
+                        <h5><strong>Total</strong></h5>
+                        <div class="product-subtotal"><h2 id="productCost2"></h2></div>
+                    </div>
+                </div>
+                
+                <button class="normal">checkout</button>
             </div>
         </section>
 
@@ -68,22 +87,21 @@
         <section id="card-add" class="section-p1">
             <div id="subtotal">
                 <h3>Card Total</h3>
-                <table id="card-total">
-                    <tr>
-                        <td>
-                           Card Subtotal 
-                        </td>
-                        <td>₺595</td>
-                    </tr>
-                    <tr>
-                        <td>Shipping</td>
-                        <td>Free</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Total</strong></td>
-                        <td><strong>₺595</strong></td>
-                    </tr>
-                </table>
+                <div class="container">
+                    <div class="row">
+                        <h5>Card Subtotal</h5>
+                        <div class="product-subtotal"><h2 id="productCost"></h2></div>
+                    </div>
+                    <div class="row">
+                        <h5>Shipping</h5>
+                        <h5>Free</h5>
+                    </div>
+                    <div class="row">
+                        <h5><strong>Total</strong></h5>
+                        <div class="product-subtotal"><h2 id="productCost"></h2></div>
+                    </div>
+                </div>
+                
                 <button class="normal">checkout</button>
             </div>
         </section>

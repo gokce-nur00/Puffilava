@@ -288,6 +288,8 @@ document.querySelectorAll('.cart-item button').forEach(function (button) {
 //card-quantity*cost
 var quantityInput = document.getElementById('quantityInput');
 var productCost = document.getElementById('productCost');
+var productCost1 = document.getElementById('productCost1');
+var productCost2 = document.getElementById('productCost2');
 
 quantityInput.addEventListener('change', function () {
   var quantity = parseInt(quantityInput.value, 10);
@@ -295,6 +297,8 @@ quantityInput.addEventListener('change', function () {
   var subtotal = quantity * price;
 
   productCost.textContent = '₺' + subtotal.toFixed(2);
+  productCost1.textContent = '₺' + subtotal.toFixed(2);
+  productCost2.textContent = '₺' + subtotal.toFixed(2);
 });
 
 

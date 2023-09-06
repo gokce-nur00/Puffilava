@@ -657,6 +657,10 @@ footer .copyright{
     height: auto;
 }
 
+.product-quantity{
+    padding-left: 8%;
+    margin: 0;
+}
 
 #card{
     overflow-x: auto;
@@ -750,6 +754,25 @@ footer .copyright{
 #subtotal h3{
     padding-bottom:15px;
 }
+
+#quantityInput{
+    width: 20%;
+    padding: 2px;
+    box-sizing: content-box;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row h2{
+    color: #000;
+    font-size: large;
+}
+
 /* Media Query*/
 
 @media (max-width:920px) {

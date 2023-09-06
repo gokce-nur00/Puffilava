@@ -212,10 +212,8 @@ const search = () =>{
 }
 //single-product-to-card
 document.addEventListener("DOMContentLoaded", function () {
-    // Önce localStorage'dan selectedProduct bilgisini alın
     var selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
 
-    // Ardından bu bilgiyi kullanarak yeni bir cart-item oluşturun
     if (selectedProduct) {
         var cartContainer = document.getElementById("cartContainer");
         var cartItem = document.createElement("div");
@@ -227,41 +225,34 @@ document.addEventListener("DOMContentLoaded", function () {
         var removeIcon = document.createElement("i");
         removeIcon.classList.add("far", "fa-times-circle");
         removeButton.appendChild(removeIcon);
-        // Remove butonuna tıklanınca bu ürünü sepetten kaldırabilirsiniz
         removeButton.addEventListener("click", function () {
             cartContainer.removeChild(cartItem);
         });
 
-        // Ürün Resmi
         var productImage = document.createElement("div");
         var imageElement = document.createElement("img");
         imageElement.src = selectedProduct.image;
         productImage.appendChild(imageElement);
 
-        // Ürün Adı
         var productName = document.createElement("div");
         productName.textContent = selectedProduct.name;
 
-        // Ürün Fiyatı
         var productPrice = document.createElement("div");
         productPrice.textContent = selectedProduct.cost;
 
-        // Ürün Adedi (Quantity)
         var productQuantity = document.createElement("div");
         var quantityInput = document.createElement("input");
         quantityInput.type = "number";
-        quantityInput.value = 1; // Varsayılan değer
-        // Adet değiştiğinde toplam fiyatı güncelleyin
+        quantityInput.value = 1; 
+
         quantityInput.addEventListener("input", function () {
             productPrice.textContent = (parseInt(quantityInput.value) * parseFloat(selectedProduct.cost)).toFixed(2);
         });
         productQuantity.appendChild(quantityInput);
 
-        // Toplam Fiyat (Subtotal)
         var productSubtotal = document.createElement("div");
-        productSubtotal.textContent = selectedProduct.cost; // İlk başta tek ürün fiyatı olarak ayarlanmış
+        productSubtotal.textContent = selectedProduct.cost; 
 
-        // Oluşturulan tüm elemanları cart-item içine ekleyin
         cartItem.appendChild(removeButton);
         cartItem.appendChild(productImage);
         cartItem.appendChild(productName);
@@ -269,7 +260,6 @@ document.addEventListener("DOMContentLoaded", function () {
         cartItem.appendChild(productQuantity);
         cartItem.appendChild(productSubtotal);
 
-        // Oluşturulan cart-item'i container'a ekleyin
         cartContainer.appendChild(cartItem);
     }
     
@@ -302,6 +292,10 @@ quantityInput.addEventListener('change', function () {
 });
 
 
-  
+//checkout
+
+
+ 
+
   
   

@@ -78,31 +78,21 @@
                     </div>
                 </div>
                 
-                <button class="normal">checkout</button>
-            </div>
-        </section>
+                <button class="normal" id="checkout-button">checkout</button>
 
-
-
-        <section id="card-add" class="section-p1">
-            <div id="subtotal">
-                <h3>Card Total</h3>
-                <div class="container">
-                    <div class="row">
-                        <h5>Card Subtotal</h5>
-                        <div class="product-subtotal"><h2 id="productCost"></h2></div>
-                    </div>
-                    <div class="row">
-                        <h5>Shipping</h5>
-                        <h5>Free</h5>
-                    </div>
-                    <div class="row">
-                        <h5><strong>Total</strong></h5>
-                        <div class="product-subtotal"><h2 id="productCost"></h2></div>
-                    </div>
-                </div>
-                
-                <button class="normal">checkout</button>
+                <table id="checkout-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="checkout-items">
+                        <!-- Burada checkout için öğelerin listesini dolduracaksınız -->
+                    </tbody>
+                </table>
             </div>
         </section>
 

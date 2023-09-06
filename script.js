@@ -159,7 +159,11 @@ var jsonData = {
 
     ]
 };
+
 var productDivs = document.querySelectorAll('.pro');
+
+var selectedProducts = [];
+
 productDivs.forEach(function(productDiv) {
     productDiv.addEventListener('click', function() {
         var productId = productDiv.getAttribute('data-id');
@@ -167,11 +171,13 @@ productDivs.forEach(function(productDiv) {
             return product.sys.id === productId;
         });
         if (selectedProduct) {
+            selectedProducts.push(selectedProduct)
             window.location.href = 'singleproduct.html';
             localStorage.setItem('selectedProduct', JSON.stringify(selectedProduct));
         }
     });
 });
+//to singleproduct
 document.addEventListener("DOMContentLoaded", function () {
     var selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
     if (selectedProduct) {
@@ -181,79 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-var addToCartButton = document.getElementById('add-button');
-if (addToCartButton) {
-    addToCartButton.addEventListener('click', function () {
-        //window.location.href = `card.html?image=${selectedProduct.fields.image}&name=${selectedProduct.fields.name}&cost=${selectedProduct.fields.cost}`;
-        var selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
-        if (selectedProduct) {
-            var productName = selectedProduct.fields.name;
-            var productCost = selectedProduct.fields.cost;
-            var productImage = selectedProduct.fields.image;
-
-            var newRow = document.createElement("tr");
-            newRow.innerHTML = `
-                <td>
-                    <button>
-                        <i class="far fa-times-circle"></i>
-                    </button>
-                </td>
-                <td>
-                    <img src="${productImage}" alt="">
-                </td>
-                <td>
-                    ${productName}
-                </td>
-                <td>${productCost}</td>
-                <td>
-                    <input type="number" value="1">
-                </td>
-                <td>${productCost}</td>
-            `;
-            var tbody = document.getElementById("cartTableBody");
-            //console.log(newRow.innerHTML);
-            if (tbody) {
-                tbody.appendChild(newRow);
-                localStorage.setItem('cartProduct', JSON.stringify(selectedProduct));
-                window.location.href = 'card.html';
-            }
-        }
-    
-    
-    });
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    var cartProduct = JSON.parse(localStorage.getItem('cartProduct'));
-
-    if (cartProduct) {
-        var tableRow = document.getElementById("cartTableBody");
-        var row = `
-            <tr>
-                <td>
-                    <a href="#">
-                        <i class="far fa-times-circle"></i>
-                    </a>
-                </td>
-                <td>
-                    <img src="${cartProduct.fields.image}" alt="">
-                </td>
-                <td>
-                    ${cartProduct.fields.name}
-                </td>
-                <td>${cartProduct.fields.cost}</td>
-                <td>
-                    <input type="number" value="1">
-                </td>
-                <td>${cartProduct.fields.cost}</td>
-            </tr>  
-        `;
-        tableRow.innerHTML += row;
-        console.log(tableRow.innerHTML);
-        localStorage.removeItem('cartProduct');
-    }
-});
-
+//shop-search
 const search = () =>{
     const searchBox = document.getElementById("search-item").value.toUpperCase();
     const storeItems = document.getElementById("pro-container");
@@ -276,3 +210,94 @@ const search = () =>{
     }
 
 }
+//single-product-to-card
+document.addEventListener("DOMContentLoaded", function () {
+    // Önce localStorage'dan selectedProduct bilgisini alın
+    var selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
+
+    // Ardından bu bilgiyi kullanarak yeni bir cart-item oluşturun
+    if (selectedProduct) {
+        var cartContainer = document.getElementById("cartContainer");
+        var cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item");
+
+        // Remove Butonu
+        var removeButton = document.createElement("button");
+        removeButton.classList.add("normal");
+        var removeIcon = document.createElement("i");
+        removeIcon.classList.add("far", "fa-times-circle");
+        removeButton.appendChild(removeIcon);
+        // Remove butonuna tıklanınca bu ürünü sepetten kaldırabilirsiniz
+        removeButton.addEventListener("click", function () {
+            cartContainer.removeChild(cartItem);
+        });
+
+        // Ürün Resmi
+        var productImage = document.createElement("div");
+        var imageElement = document.createElement("img");
+        imageElement.src = selectedProduct.image;
+        productImage.appendChild(imageElement);
+
+        // Ürün Adı
+        var productName = document.createElement("div");
+        productName.textContent = selectedProduct.name;
+
+        // Ürün Fiyatı
+        var productPrice = document.createElement("div");
+        productPrice.textContent = selectedProduct.cost;
+
+        // Ürün Adedi (Quantity)
+        var productQuantity = document.createElement("div");
+        var quantityInput = document.createElement("input");
+        quantityInput.type = "number";
+        quantityInput.value = 1; // Varsayılan değer
+        // Adet değiştiğinde toplam fiyatı güncelleyin
+        quantityInput.addEventListener("input", function () {
+            productPrice.textContent = (parseInt(quantityInput.value) * parseFloat(selectedProduct.cost)).toFixed(2);
+        });
+        productQuantity.appendChild(quantityInput);
+
+        // Toplam Fiyat (Subtotal)
+        var productSubtotal = document.createElement("div");
+        productSubtotal.textContent = selectedProduct.cost; // İlk başta tek ürün fiyatı olarak ayarlanmış
+
+        // Oluşturulan tüm elemanları cart-item içine ekleyin
+        cartItem.appendChild(removeButton);
+        cartItem.appendChild(productImage);
+        cartItem.appendChild(productName);
+        cartItem.appendChild(productPrice);
+        cartItem.appendChild(productQuantity);
+        cartItem.appendChild(productSubtotal);
+
+        // Oluşturulan cart-item'i container'a ekleyin
+        cartContainer.appendChild(cartItem);
+    }
+    
+});
+
+//card-click-remove
+document.querySelectorAll('.cart-item button').forEach(function (button) {
+    button.addEventListener('click', function () {
+    var cartItem = this.closest('.cart-item');
+    if (cartItem) {
+    cartItem.remove();
+    }
+    });
+});
+
+//card-quantity*cost
+var quantityInput = document.getElementById('quantityInput');
+var productCost = document.getElementById('productCost');
+
+quantityInput.addEventListener('change', function () {
+  var quantity = parseInt(quantityInput.value, 10);
+  var price = parseFloat(productCost.textContent.replace('₺', ''));
+  var subtotal = quantity * price;
+
+  productCost.textContent = '₺' + subtotal.toFixed(2);
+});
+
+
+  
+  
+  

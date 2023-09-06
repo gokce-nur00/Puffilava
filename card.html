@@ -38,42 +38,37 @@
         </section>
 
         <section id="card" class="section-p1">
-            <table width="100%">
-                <thead>
-                    <tr>
-                        <td>Remove</td>
-                        <td>Image</td>
-                        <td>Product</td>
-                        <td>Price</td>
-                        <td>Quantity</td>
-                        <td>Subtotal</td>
-                    </tr>
-                </thead>
-                <tbody id="cartTableBody">
-                    <td>
-                        <button class="normal" id="remove-button">
-                            <i class="far fa-times-circle"></i>
-                        </bu>
-                    </td>
-                    <td>
-                        <img src="img/products/cilekli_soguk_baklava.jpg" alt="">
-                    </td>
-                    <td>
-                        Strawberry Cold Baklava
-                    </td>
-                    <td>₺600</td>
-                    <td>
-                        <input type="number" value="1">
-                    </td>
-                    <td>₺600</td>
-                </tbody>
-            </table>
+            <div class="cart-item">
+                <h3>Remove</h3>
+                <h3>Image</h3>
+                <h3>Product</h3>
+                <h3>Price</h3>
+                <h3>Quantity</h3>
+            </div>
+            <div class="container">
+                <div class="cart-item" id="card-css">
+                    <button class="normal">
+                        <i class="far fa-times-circle"></i>
+                    </button>
+                    <div class="product-image">
+                        <img src="" id="MainImg" width="5%">
+                    </div>
+                    <div class="product-title"><h6 id="productName"></h6></div>
+                    <div class="product-price"><h6 id="productCost"></h6></div>
+                    <div class="product-quantity">
+                        <input type="number" id="quantityInput" value="1">
+                    </div>
+                    <div class="product-subtotal"><h2 id="productCost"></h2></div>
+                </div>
+            </div>
         </section>
+
+
 
         <section id="card-add" class="section-p1">
             <div id="subtotal">
                 <h3>Card Total</h3>
-                <table>
+                <table id="card-total">
                     <tr>
                         <td>
                            Card Subtotal 

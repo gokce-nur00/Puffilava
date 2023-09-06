@@ -61,6 +61,10 @@ button.normal{
     transition: 0.02s;
 }
 
+button.normal:hover{
+    background-color: rgb(95, 166, 205);
+    color: #000;
+}
 body {
   width: 100%;
 }
@@ -598,6 +602,61 @@ footer .copyright{
 }
 
 /*Card*/
+.container {
+    display: grid; /* Grid düzenini kullan */
+    grid-template-columns: 1fr; /* Her sütun 1 fraksiyon genişliğinde */
+    gap: 10px; /* Satır ve sütunlar arasına boşluk ekle */
+}
+
+.cart-item {
+    display: flex;
+    justify-content:  space-around; /* Yatayda ortala */
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    flex-direction: row;
+    align-content: space-between;
+    text-align: center;
+}
+
+#card-css {
+    display: flex;
+    padding-left: 8%;
+    padding-right: 2px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.product-details{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-image{
+    padding-left: 8%;
+    margin: 0;
+}
+.product-title{
+    padding-left: 8%;
+    margin: 0;
+}
+.product-price{
+    padding-left: 8%;
+    margin: 0;
+}
+
+.product-image img{
+    width: 70px;
+    height: auto;
+}
+
 
 #card{
     overflow-x: auto;
